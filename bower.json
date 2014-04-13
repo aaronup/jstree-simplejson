@@ -1,0 +1,34 @@
+{
+  "name": "jstree-simplejson",
+  "version": "0.1.0",
+  "authors": [
+    "Aaron Upshaw <aaron@touchto.io>"
+  ],
+  "description": "Simple JSON integration with jstree",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "ui",
+    "jstree",
+    "tree",
+    "json"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/aaronup/jstree-simplejson.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "*.sublime-project",
+    "Gruntfile.coffee",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "jstree": "~3.0.0-beta9"
+  }
+}

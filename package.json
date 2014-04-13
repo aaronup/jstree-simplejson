@@ -1,0 +1,35 @@
+{
+  "name": "jstree-simplejson",
+  "version": "0.1.0",
+  "description": "Simple JSON integration with jstree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaronup/jstree-simplejson.git"
+  },
+  "keywords": [
+    "ui",
+    "jstree",
+    "tree",
+    "json"
+  ],
+  "author": "Aaron Upshaw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronup/jstree-simplejson/issues"
+  },
+  "homepage": "https://github.com/aaronup/jstree-simplejson",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-compass": "^0.7.2",
+    "grunt-newer": "^0.7.0",
+    "grunt": "^0.4.4",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
