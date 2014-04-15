@@ -30,5 +30,5 @@ module.exports = (grunt) ->
     @loadNpmTasks( 'grunt-contrib-watch' )
 
     @registerTask( 'default', ['clean', 'coffee', 'watch'] )
-    @registerTask( 'build', ['clean', 'coffee'] )
+    @registerTask( 'build', ['clean', 'coffee', 'uglify'] )
     return
