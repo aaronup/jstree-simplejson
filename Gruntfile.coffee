@@ -14,6 +14,10 @@ module.exports = (grunt) ->
                 src: ['**/*.coffee']
                 dest: 'dist'
                 ext: '.js'
+        uglify:
+            dist:
+                files: 
+                    'dist/jstree-simplejson.min.js': ['dist/jstree-simplejson.js']
         watch:
             scripts:
                 files: ['src/**/*.coffee']
@@ -22,8 +26,9 @@ module.exports = (grunt) ->
 
     @loadNpmTasks( 'grunt-contrib-clean' )
     @loadNpmTasks( 'grunt-contrib-coffee' )
+    @loadNpmTasks( 'grunt-contrib-uglify' )
     @loadNpmTasks( 'grunt-contrib-watch' )
 
     @registerTask( 'default', ['clean', 'coffee', 'watch'] )
-    @registerTask( 'build', ['clean', 'coffee'] )
+    @registerTask( 'build', ['clean', 'coffee', 'uglify'] )
     return

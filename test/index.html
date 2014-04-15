@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsTree simple json test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/jstree/dist/themes/default/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>jsTree simple json test</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="jstree-simplejson"></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="jstree-simplejson_url"></div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script src="/bower_components/jstree/dist/jstree.js"></script>
+    <script src="/dist/jstree-simplejson.js"></script>
+    <script>
+    config = {
+        plugins: ['themes','dnd', 'unique', 'contextmenu', 'wholerow'],
+        core: {
+            check_callback: true,
+            animation: false,
+        }
+    };
+    $.when($.getJSON('/test/links.json')).then(function(data) {
+        $('.jstree-simplejson').jstree(config).jstree().load_simplejson( data.links );
+    });
+
+    $('.jstree-simplejson_url').jstree(config).jstree('load_simplejson', '/test/links.json' );
+    </script>
+</body>
+</html>
