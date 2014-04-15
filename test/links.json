@@ -1,0 +1,31 @@
+{
+    "links": [
+        {
+            "text": "something_1",
+            "href": "#",
+            "weight": 0
+        },
+        {
+            "text": "something_2",
+            "href": "#",
+            "weight": 1,
+            "links": [
+                {
+                    "text": "something_00",
+                    "href": "#",
+                    "weight": 0
+                },
+                {
+                    "text": "something_01",
+                    "href": "#",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "text": "something_3",
+            "href": "#",
+            "weight": 2
+        }
+    ]
+}
