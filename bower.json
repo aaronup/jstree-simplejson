@@ -8,6 +8,7 @@
   "moduleType": [
     "amd"
   ],
+  "main": "dist/jstree-simplejson.js",
   "keywords": [
     "ui",
     "jstree",
