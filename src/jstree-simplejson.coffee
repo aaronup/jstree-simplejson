@@ -4,7 +4,7 @@ do ->
     get_children = ->
         children = []
         $(this).each((index, child) ->
-            link = 
+            link =
                 text: child.text
                 href: child.a_attr.href
                 weight: children.length
@@ -34,13 +34,16 @@ do ->
         return simplejson
         # Do stuff
 
-    load_simplejson = (json) ->
-        if typeof json is 'string' 
+    load_simplejson = (json, callback) ->
+        if callback is undefined or typeof callback is 'string'
+            callback = ->
+                return
+        if typeof json is 'string'
             $.when($.getJSON(json)).then( $.proxy(load_simplejson, @) )
         else
             if typeof json is 'object' and json.links isnt undefined then json = json.links
             dom = build_dom( json )
-            @_append_html_data( @get_node( '#' ), dom )
+            @_append_html_data( @get_node( '#' ), dom, callback)
             return @
 
     ((factory) ->
