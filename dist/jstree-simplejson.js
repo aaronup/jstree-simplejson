@@ -42,8 +42,11 @@
     simplejson = get_children.call(json);
     return simplejson;
   };
-  load_simplejson = function(json) {
+  load_simplejson = function(json, callback) {
     var dom;
+    if (callback === void 0 || typeof callback === 'string') {
+      callback = function() {};
+    }
     if (typeof json === 'string') {
       return $.when($.getJSON(json)).then($.proxy(load_simplejson, this));
     } else {
@@ -51,7 +54,7 @@
         json = json.links;
       }
       dom = build_dom(json);
-      this._append_html_data(this.get_node('#'), dom);
+      this._append_html_data(this.get_node('#'), dom, callback);
       return this;
     }
   };

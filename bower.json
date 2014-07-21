@@ -1,6 +1,6 @@
 {
   "name": "jstree-simplejson",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "authors": [
     "Aaron Upshaw <aaron@touchto.io>"
   ],
@@ -8,6 +8,7 @@
   "moduleType": [
     "amd"
   ],
+  "main": "dist/jstree-simplejson.js",
   "keywords": [
     "ui",
     "jstree",
