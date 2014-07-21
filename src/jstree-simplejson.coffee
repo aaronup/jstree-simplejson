@@ -52,9 +52,8 @@ do ->
         else if typeof exports is 'object' then factory( require['jquery'], require['jstree'] )
         else factory( jQuery, jQuery.jstree )
         return
-    )(($, jstree) ->
+    )(($, jstree = $.jstree) ->
         "use strict"
-
         if jstree.core.prototype.get_simplejson then return
 
         jstree.core.prototype.get_simplejson = get_simplejson
