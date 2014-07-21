@@ -65,6 +65,9 @@
       factory(jQuery, jQuery.jstree);
     }
   })(function($, jstree) {
+    if (jstree == null) {
+      jstree = $.jstree;
+    }
     "use strict";
     if (jstree.core.prototype.get_simplejson) {
       return;

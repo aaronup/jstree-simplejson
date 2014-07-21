@@ -1,6 +1,6 @@
 {
   "name": "jstree-simplejson",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple JSON integration with jstree",
   "main": "index.js",
   "scripts": {
